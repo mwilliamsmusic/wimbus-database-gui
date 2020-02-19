@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ItemForm from "./forms/form";
+import Form from "./forms/form";
 
 function App() {
   return (
     <div className="App">
-      <ItemForm name='Name' location='Location' desc = 'Description' char='Character'/>
+<Form/>
     </div>
+
   );
 }
 

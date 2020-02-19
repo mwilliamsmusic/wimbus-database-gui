@@ -2,7 +2,7 @@ import React from "react";
 import {useInput} from "../hooks/input-hook";
 
 
-const ItemForm = (props) => {
+const Form = (props) => {
     const {value: name, bind: bindName, reset: resetName} = useInput('');
     const {value: location, bind: bindLocation, reset: resetLocation} = useInput('');
     const {value: desc, bind: bindDesc, reset: resetDesc} = useInput('');
@@ -21,32 +21,38 @@ const ItemForm = (props) => {
         <div className="container">
 
             <form  onSubmit={handleSubmit}>
-                <div className='form-horizontal'>
-                <div className='form-group'>
-                    <label className='col-sm-8 '>{props.name}:   </label>
-                    <input type="text" className='form-control' {...bindName} />
-
+                <div className="form-group row">
+                    <label className="col-sm-2 col-form-label">Name:</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" {...bindName}/>
+                    </div>
                 </div>
 
-                <div className='form-group'>
-                    <label className='col-sm-2 control-label'>{props.location}: </label>
-                    <input type="text" className='form-control' {...bindLocation} />
+
+                <div className="form-group row">
+                    <label className="col-sm-2 col-form-label">Character:</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" {...bindChar}/>
+                    </div>
                 </div>
 
-                <div className='form-group'>
-                    <label className='col-sm-2 control-label'>{props.char}: </label>
-                    <input type="text" className='form-control' {...bindChar} />
+                <div className="form-group row">
+                    <label className="col-sm-2 col-form-label">Location:</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" {...bindLocation}/>
+                    </div>
                 </div>
 
-                <div className='form-group'>
-                    <label className='col-sm-2 control-label'>{props.desc}: </label>
-                    <input type="text" className='form-control' {...bindDesc} />
+                <div className="form-group row">
+                    <label className="col-sm-2 col-form-label">Description:</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" {...bindDesc}/>
+                    </div>
                 </div>
 
                 <button type="submit" value="Submit" className="btn btn-success ">Submit</button>
-                </div>
             </form>
         </div>
     );
 };
-export default ItemForm;
+export default Form;
