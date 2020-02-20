@@ -1,15 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import Form from "./forms/form";
+import Navbar from "./navbar/navbar";
+import Display from "./display/display";
 
 function App() {
-  return (
-    <div className="App">
-<Form/>
-    </div>
-
-  );
+    return (
+        <>
+        <Navbar/>
+       </>
+    );
 }
 
 export default App;

@@ -18,40 +18,42 @@ const Form = (props) => {
     };
 
     return (
-        <div className="container">
+        <div className='m-4'>
+            <div className="container border border-primary p-3">
 
-            <form  onSubmit={handleSubmit}>
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Name:</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" {...bindName}/>
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Name:</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control" {...bindName}/>
+                        </div>
                     </div>
-                </div>
 
 
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Character:</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" {...bindChar}/>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Character:</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control" {...bindChar}/>
+                        </div>
                     </div>
-                </div>
 
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Location:</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" {...bindLocation}/>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Location:</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control" {...bindLocation}/>
+                        </div>
                     </div>
-                </div>
 
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Description:</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" {...bindDesc}/>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Description:</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control" {...bindDesc}/>
+                        </div>
                     </div>
-                </div>
 
-                <button type="submit" value="Submit" className="btn btn-success ">Submit</button>
-            </form>
+                    <button type="submit" value="Submit" className="btn btn-success ">Submit</button>
+                </form>
+            </div>
         </div>
     );
 };
